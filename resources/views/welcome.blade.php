@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guitar Heaven</title>
-  <!-- Incluir CSS de Bootstrap -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="cuerpo-general">
 
     @include('layout.header')
-
+<br>
   <!-- Carrusel -->
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -18,10 +17,10 @@
         <img src="{{asset('imagenes/strato.png')}}" class="d-block w-100" alt="..." height="300" width="500">
       </div>
       <div class="carousel-item">
-        <img src="{{asset('imagenes/strato azul.png')}}" class="d-block w-100" alt="..." height="300" width="500">
+        <img src="{{asset('imagenes/strato_azul.png')}}" class="d-block w-100" alt="..." height="300" width="500">
       </div>
       <div class="carousel-item">
-        <img src="{{asset('imagenes/les paul.png')}}" class="d-block w-100" alt="..." height="300" width="500">
+        <img src="{{asset('imagenes/les_paul.png')}}" class="d-block w-100" alt="..." height="300" width="500">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -34,11 +33,10 @@
     </button>
   </div>
   <!-- fin del carousel -->
-
+<br>
   @include('layout.footer')
 
 
-  <!-- Incluir JavaScript de Bootstrap y dependencias -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>

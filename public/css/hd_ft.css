@@ -30,6 +30,10 @@
     display: inline-block;
 }
 
+.cuerpo-general{
+    background-color: bisque;
+}
+
 /* Estilos del Footer */
 
 .cuerpo-pie {
