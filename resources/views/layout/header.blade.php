@@ -13,11 +13,17 @@
     <header>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand">Navbar</a>
+              <a class="navbar-brand">Guitar Heaven</a>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
+                <a class="img-func" href="#">
+                  <img src="{{asset('imagenes/usuario.png')}}" alt="Inicio de sesion" width="40" height="28">
+                </a>
+                <a class="img-func2" href="#">
+                  <img src="{{asset('imagenes/Carrito de compras.png')}}" alt="Carro de compras" width="40" height="28">
+                </a>
             </div>
           </nav>
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -26,9 +32,6 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
                   </li>
@@ -50,6 +53,38 @@
           </nav>
     </header>
 </body>
+<style>
+    header{
+        background-color: #102C57;
+    }
+
+    .navbar-brand{
+        color: azure;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .nav-link{
+        color: azure;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+    }
+
+    .img-func{
+        border-radius: 50% 10px;
+        object-fit: cover;
+        background-color: #ffffff
+    }
+
+    .img-func2{
+        border-radius: 5px;
+        object-fit: cover;
+        background-color: #ffffff;
+    }
+
+    .img-func, .img-func2 {
+        display: inline-block; /* Asegura que los enlaces sean elementos en línea */
+    }
+</style>
 
 
 

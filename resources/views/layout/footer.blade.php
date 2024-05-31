@@ -56,7 +56,7 @@
 <style>
     body {
     margin: 0;
-    font-family:'Verdana',sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 footer {
     background-color: #000;
@@ -74,46 +74,54 @@ footer {
 .footer-section {
     flex: 1;
     margin: 10px 0;
+    font-size: 15px;
 }
 
-.footer-section h2, .footer-section h3 {
+.footer-section h3, .footer-section h4 {
     margin: 0;
-
+    font-size: 15px;
 }
 
 .footer-section p, .footer-section ul {
     margin: 10px 0;
     line-height: 1.6;
+    font-size: 15px;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
+    font-size: 15px;
 }
 
 .footer-section ul li {
     margin: 5px 0;
+    font-size: 15px;
 }
 
 .footer-section ul li a, .footer-section p a {
     color: #fff;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .footer-section ul li a:hover, .footer-section p a:hover {
     text-decoration: underline;
+    font-size: 15px;
 }
 
 .footer-section.next-about a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
+    font-size: 15px;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #444;
+    font-size: 15px;
 }
 
 </style>
