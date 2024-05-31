@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href=""{{ asset('css/hd_ft.css') }}>
     <title>Envoy Footer</title>
 </head>
-<body>
-    <footer>
+<body class="cuerpo-pie">
+    <footer class="footer-1">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Guitar Heaven</h3>
@@ -52,76 +52,3 @@
     </footer>
 </body>
 </html>
-
-<style>
-    body {
-    margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 10%;
-}
-
-.footer-section {
-    flex: 1;
-    margin: 10px 0;
-    font-size: 15px;
-}
-
-.footer-section h3, .footer-section h4 {
-    margin: 0;
-    font-size: 15px;
-}
-
-.footer-section p, .footer-section ul {
-    margin: 10px 0;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    font-size: 15px;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-    font-size: 15px;
-}
-
-.footer-section ul li a, .footer-section p a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.footer-section ul li a:hover, .footer-section p a:hover {
-    text-decoration: underline;
-    font-size: 15px;
-}
-
-.footer-section.next-about a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-size: 15px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #444;
-    font-size: 15px;
-}
-
-</style>

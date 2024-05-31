@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/hd_ft.css') }}">
     <title>Header</title>
 </head>
 <body>
-    <header>
+    <header class="cabeza-1">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand">Guitar Heaven</a>
@@ -53,41 +53,10 @@
           </nav>
     </header>
 </body>
-<style>
-    header{
-        background-color: #102C57;
-    }
-
-    .navbar-brand{
-        color: azure;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    .nav-link{
-        color: azure;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 15px;
-    }
-
-    .img-func{
-        border-radius: 50% 10px;
-        object-fit: cover;
-        background-color: #ffffff
-    }
-
-    .img-func2{
-        border-radius: 5px;
-        object-fit: cover;
-        background-color: #ffffff;
-    }
-
-    .img-func, .img-func2 {
-        display: inline-block; /* Asegura que los enlaces sean elementos en línea */
-    }
-</style>
-
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
