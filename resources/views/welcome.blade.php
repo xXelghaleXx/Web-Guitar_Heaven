@@ -33,7 +33,32 @@
     </button>
   </div>
   <!-- fin del carousel -->
-<br>
+
+  <!-- Productos de ventas -->
+  <br><br>
+  <!-- Fin de productos de ventas -->
+  <br>
+  <!-- Marcas de productos de ventas -->
+  <div class="body">
+    <div class="image-buttons">
+        <a href="#" class="image-button">
+            <img src="{{ asset('imagenes/fender_logo.jpg') }}" alt="Botón 1" height="500px" width="400px">
+            <p class="nombre-btn">Fender</p>
+        </a>
+        <a href="#" class="image-button">
+            <img src="{{ asset('imagenes/gibson_logo.jpg') }}" alt="Botón 2" height="500px" width="400px">
+            <p class="nombre-btn">Gibson</p>
+        </a>
+        <a href="#" class="image-button">
+            <img src="{{ asset('imagenes/Ibanez_logo.jpg') }}" alt="Botón 3" height="500px" width="400px">
+            <p class="nombre-btn">Ibanez</p>
+        </a>
+    </div>
+  </div>
+  <!-- Fin de marcas de productos de ventas -->
+
+
+
   @include('layout.footer')
 
 

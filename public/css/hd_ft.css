@@ -31,7 +31,7 @@
 }
 
 .cuerpo-general{
-    background-color: bisque;
+    background-color: #EADBC8;
 }
 
 /* Estilos del Footer */
@@ -104,4 +104,46 @@
     padding: 10px 0;
     border-top: 1px solid #444;
     font-size: 15px;
+}
+
+/* Imagenes de marcas */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #DAC0A3;
+}
+
+.image-buttons {
+    display: flex;
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.image-button {
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.image-button img {
+    display: block;
+    width: 400px; /* Ajusta el tamaño de la imagen según necesites */
+    height: auto;
+    filter: blur(10%);
+    cursor: pointer;
+}
+
+.image-button:hover {
+    border-color: #007BFF; /* Color del borde al pasar el mouse */
+}
+
+.nombre-btn{
+    color: #000;
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    text-decoration: none !important;
+    text-align: center !important;
 }
