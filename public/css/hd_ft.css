@@ -1,26 +1,26 @@
 /* Estilos del header*/
-.cabeza-1{
+.cabeza-1 {
     background-color: #102C57;
 }
 
-.navbar-brand{
+.navbar-brand {
     color: azure;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.nav-link{
+.nav-link {
     color: azure;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 15px;
 }
 
-.img-func{
+.img-func {
     border-radius: 50% 10px;
     object-fit: cover;
-    background-color: #ffffff
+    background-color: #ffffff;
 }
 
-.img-func2{
+.img-func2 {
     border-radius: 5px;
     object-fit: cover;
     background-color: #ffffff;
@@ -30,8 +30,19 @@
     display: inline-block;
 }
 
-.cuerpo-general{
+.cuerpo-general {
     background-color: #EADBC8;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre las imágenes */
+    margin-left: auto;
 }
 
 /* Estilos del Footer */
@@ -106,44 +117,4 @@
     font-size: 15px;
 }
 
-/* Imagenes de marcas */
-.body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #DAC0A3;
-}
-
-.image-buttons {
-    display: flex;
-    gap: 10px; /* Espacio entre las imágenes */
-}
-
-.image-button {
-    display: inline-block;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-.image-button img {
-    display: block;
-    width: 400px; /* Ajusta el tamaño de la imagen según necesites */
-    height: auto;
-    filter: blur(10%);
-    cursor: pointer;
-}
-
-.image-button:hover {
-    border-color: #007BFF; /* Color del borde al pasar el mouse */
-}
-
-.nombre-btn{
-    color: #000;
-    display: inline-block;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-    text-decoration: none !important;
-    text-align: center !important;
-}
+/*Fin de la edicion*/

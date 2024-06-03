@@ -18,12 +18,14 @@
                 <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Buscar</button>
               </form>
+              <div class="navbar-right">
                 <a class="img-func" href="#">
-                  <img src="{{asset('imagenes/usuario.png')}}" alt="Inicio de sesion" width="40" height="28">
+                  <img src="{{ asset('imagenes/usuario.png') }}" alt="Inicio de sesion" width="40" height="28">
                 </a>
                 <a class="img-func2" href="#">
-                  <img src="{{asset('imagenes/Carrito de compras.png')}}" alt="Carro de compras" width="40" height="28">
+                  <img src="{{ asset('imagenes/Carrito de compras.png') }}" alt="Carro de compras" width="40" height="28">
                 </a>
+              </div>
             </div>
           </nav>
           <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -33,19 +35,22 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Marcas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Modelos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Amplificadores</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Accesorios</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Soporte</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contactanos</a>
                   </li>
                 </ul>
               </div>
@@ -53,7 +58,6 @@
           </nav>
     </header>
 </body>
-
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

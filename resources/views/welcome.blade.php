@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guitar Heaven</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/body_main.css')}}">
 </head>
 <body class="cuerpo-general">
 
@@ -39,20 +40,18 @@
   <!-- Fin de productos de ventas -->
   <br>
   <!-- Marcas de productos de ventas -->
+  <H2> Marcas Populares </H2>
   <div class="body">
     <div class="image-buttons">
-        <a href="#" class="image-button">
-            <img src="{{ asset('imagenes/fender_logo.jpg') }}" alt="Botón 1" height="500px" width="400px">
-            <p class="nombre-btn">Fender</p>
-        </a>
-        <a href="#" class="image-button">
-            <img src="{{ asset('imagenes/gibson_logo.jpg') }}" alt="Botón 2" height="500px" width="400px">
-            <p class="nombre-btn">Gibson</p>
-        </a>
-        <a href="#" class="image-button">
-            <img src="{{ asset('imagenes/Ibanez_logo.jpg') }}" alt="Botón 3" height="500px" width="400px">
-            <p class="nombre-btn">Ibanez</p>
-        </a>
+        <div class="image-button">
+            <img src="{{ asset('imagenes/fender_logo.jpg') }}" alt="Fender">
+        </div>
+        <div class="image-button">
+            <img src="{{ asset('imagenes/gibson_logo.jpg') }}" alt="Gibson">
+        </div>
+        <div class="image-button">
+            <img src="{{ asset('imagenes/ibanez_logo.jpg') }}" alt="Ibanez">
+        </div>
     </div>
   </div>
   <!-- Fin de marcas de productos de ventas -->
