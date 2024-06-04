@@ -1,6 +1,11 @@
-/* Estilos del header*/
+/* Estilos del header */
 .cabeza-1 {
     background-color: #102C57;
+}
+
+.d-flex {
+    text-align: center;
+    justify-content: center;
 }
 
 .navbar-brand {
@@ -44,6 +49,19 @@
     gap: 10px; /* Espacio entre las imágenes */
     margin-left: auto;
 }
+
+/* Estilos para centrar la barra de búsqueda */
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-form .form-control {
+    width: 300px; /* Ajusta el tamaño de la barra de búsqueda según necesites */
+}
+
 
 /* Estilos del Footer */
 

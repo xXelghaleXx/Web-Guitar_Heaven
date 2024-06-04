@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.slide{
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    background-color: #ffff;
+    transition: 0.5s ease;
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+}
