@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="{{asset('css/body_main.css')}}">
 </head>
 <body class="cuerpo-general">
-
     @include('layout.header')
 <br>
   <!-- Carrusel -->
