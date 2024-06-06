@@ -1,41 +1,52 @@
-/*Estilos de las cartas de productos*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 8000px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: 20 auto; /* Para centrar el contenedor */
-    padding: 95px;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
-
 
 .card {
     border: 1px solid black;
     border-radius: 20px;
-    width: 200px; /* Ajusta el ancho de las cartas para que haya tres en una fila */
-    height: 430px;
-    padding: 40px;
+    width: 200px;
+    padding: 20px;
     text-align: center;
     box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
-    margin-bottom: 50px; /* Espacio entre las cartas */
-    display: inline-block; /* Para que estén en línea */
+    transition: transform 0.2s;
+    background-color: white;
+    position: relative;
 }
+
 .card img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid black;
     padding-bottom: 20px;
+    background-color: transparent;
 }
+
 .card .price {
     font-size: 1.5em;
     margin: 20px 0;
 }
-.card .nombre{
+
+.card .nombre {
     font-size: 1.3em;
     margin: 20px 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .card button {
     background-color: #102C57;
     color: white;
@@ -53,16 +64,25 @@
 .card button:hover {
     background-color: #000000;
 }
+
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.20)
+    box-shadow: 0 10px 20px rgba(0,0,0,0.20);
 }
+
 .card .cart-button {
     color: white;
-    position: relative;
-    right:-71px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #102C57;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
 }
-.segundo{
+
+.segundo {
     background-color: #102C57;
     color: white;
     border: none;
@@ -73,7 +93,5 @@
     margin: 2px 2px;
     cursor: pointer;
     border-radius: 8px;
-    position: relative;
-    width: 220px;
-    left: -15px;
+    width: 100%;
 }

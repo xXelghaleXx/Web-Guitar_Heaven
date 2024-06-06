@@ -9,36 +9,24 @@
 </head>
 <body class="cuerpo-general">
     @include('layout.header')
-<br>
-  <!-- Carrusel -->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{{asset('imagenes/bnz.jpg')}}" class="d-block w-100" alt="..." height="300" width="500">
-      </div>
-      <div class="carousel-item">
-        <img src="{{asset('imagenes/gbsg.jpg')}}" class="d-block w-100" alt="..." height="300" width="500">
-      </div>
-      <div class="carousel-item">
-        <img src="{{asset('imagenes/strtcstr.jpg')}}" class="d-block w-100" alt="..." height="300" width="500">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  <!-- fin del carousel -->
 
-  <!-- Productos de ventas -->
-  <br><br>
+    <!-- Carrusel de baners -->
+
+    @include('layout.carrusel')
+
+    <!-- fin del carrusel -->
+
+    @include('layout.seccion')
+
+
+  <!-- Productos de venta -->
+
+
 
   <!-- Fin de productos de ventas -->
-  <br>
+
+
+
   <!-- Marcas de productos de ventas -->
   <div class="body">
     <div class="content">
@@ -57,8 +45,6 @@
     </div>
 </div>
   <!-- Fin de marcas de productos de ventas -->
-
-
 
   @include('layout.footer')
 

@@ -1,66 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/hd_ft.css') }}">
-    <title>Header</title>
+    <title>Navbar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/hd_ft.css')}}">
+
 </head>
-<body>
-    <header class="cabeza-1">
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="{{route('pag_principal')}}">Guitar Heaven</a>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-              </form>
-              <div class="navbar-right">
-                <a class="img-func" href="{{route('login')}}">
-                  <img src="{{ asset('imagenes/usuario.png') }}" alt="Inicio de sesion" width="40" height="28">
-                </a>
-                <a class="img-func2" href="#">
-                  <img src="{{ asset('imagenes/Carrito de compras.png') }}" alt="Carro de compras" width="40" height="28">
-                </a>
-              </div>
-            </div>
-          </nav>
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cards')}}">Marcas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Modelos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Amplificadores</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Accesorios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Soporte</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contactanos')}}">Contactanos</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-</body>
+<body class="footer-princip">
 
+<nav class="navbar navbar-expand-lg navbar-dark flex-column">
+
+    <div class="navbar-top d-flex w-100">
+        <a class="navbar-brand" href="{{route('pag_principal')}}">Guitar Heaven</a>
+        <form class="form-inline d-flex ml-auto"> <!-- Utilidad ml-auto para alinear a la derecha -->
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>
+            <!-- Agregar iconos junto al buscador -->
+            <a href="#" class="icon"><i class="fas fa-bell"></i></a>
+            <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
+        </form>
+
+        <div class="d-flex align-items-center">
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="{{route('login')}}" class="icon"><i class="fas fa-user"></i></a>
+        </div>
+    </div>
+    <div class="navbar-bottom d-flex w-100">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('descripcion')}}">Marcas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('cards')}}">Modelos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Amplificadores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Accesorios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Guías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('contactanos')}}">Contáctanos</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 
+</body>
 </html>

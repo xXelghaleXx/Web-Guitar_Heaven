@@ -1,75 +1,63 @@
-/* Estilos del header */
-.cabeza-1 {
-    background-color: #102C57;
-}
+/* Estilos del Header */
+.navbar {
+    background-color: #0B3D91; /* Color de fondo de la barra de navegación */
 
-.d-flex {
-    text-align: center;
-    justify-content: center;
 }
-
 .navbar-brand {
-    color: azure;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
-
+.nav-item {
+    font-size: 18px;
+}
 .nav-link {
-    color: azure;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
+    color: #FFFFFF;
+    margin: 0 10px;
 }
-
-.img-func {
-    border-radius: 50% 10px;
-    object-fit: cover;
-    background-color: #ffffff;
+.nav-link:hover {
+    color: #00e7c4; /* Color al pasar el mouse */
 }
+.form-inline .form-control {
+    border-radius: 50px 0 0 50px;
+    width: 50px;
 
-.img-func2 {
-    border-radius: 5px;
-    object-fit: cover;
-    background-color: #ffffff;
 }
-
-.img-func, .img-func2 {
-    display: inline-block;
+.search-btn {
+    border-radius: 0 50px 50px 0;
 }
-
-.cuerpo-general {
-    background-color: #EADBC8;
+.icon {
+    font-size: 24px;
+    color: white;
+    margin-left: 40px; /* Espacio entre los iconos */
 }
-
-.navbar-nav {
-    margin: auto;
-}
-
-.navbar-right {
-    display: flex;
+.navbar-top {
+    justify-content: space-between;
     align-items: center;
-    gap: 10px; /* Espacio entre las imágenes */
-    margin-left: auto;
+}
+.navbar-bottom {
+    justify-content: flex-end; /* Alineación de los íconos a la derecha */
+    background-color: #0A3B85;
+    padding: 10px 0;
 }
 
-/* Estilos para centrar la barra de búsqueda */
-.search-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.search-form .form-control {
-    width: 300px; /* Ajusta el tamaño de la barra de búsqueda según necesites */
+.navbar-bottom{
+padding: 20px;
 }
 
 
 /* Estilos del Footer */
+.footer-princip{
+    width: 100%;
+}
 
-.cuerpo-pie {
+body {
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-.footer-1 {
+    font-family: sans-serif;
+}
+
+footer {
     background-color: #000;
     color: #fff;
     padding: 20px 0;
@@ -85,54 +73,44 @@
 .footer-section {
     flex: 1;
     margin: 10px 0;
-    font-size: 15px;
 }
 
-.footer-section h3, .footer-section h4 {
+.footer-section h2, .footer-section h3 {
     margin: 0;
-    font-size: 15px;
+    font-weight: bold;
 }
 
 .footer-section p, .footer-section ul {
     margin: 10px 0;
     line-height: 1.6;
-    font-size: 15px;
 }
 
 .footer-section ul {
     list-style: none;
     padding: 0;
-    font-size: 15px;
 }
 
 .footer-section ul li {
     margin: 5px 0;
-    font-size: 15px;
 }
 
 .footer-section ul li a, .footer-section p a {
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
 }
 
 .footer-section ul li a:hover, .footer-section p a:hover {
     text-decoration: underline;
-    font-size: 15px;
 }
 
 .footer-section.next-about a {
     color: #fff;
     text-decoration: none;
     font-size: 1.2em;
-    font-size: 15px;
 }
 
 .footer-bottom {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #444;
-    font-size: 15px;
 }
-
-/*Fin de la edicion*/

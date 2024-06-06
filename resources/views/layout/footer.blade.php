@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=""{{ asset('css/hd_ft.css') }}>
+    <link rel="stylesheet" href="{{asset('css/hd_ft.css')}}">
     <title>Envoy Footer</title>
 </head>
-<body class="cuerpo-pie">
-    <footer class="footer-1">
+<body>
+    <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Guitar Heaven</h3>
-                <p>Nosotros creamos posibilidades para conectar con el mundo<br><strong>Sé apasionado</strong></p>
+                <p>Las mejores marcas, mejores guitarras al alcance de un click<br><strong>Apasionate</strong></p>
             </div>
             <div class="footer-section">
                 <h3>Explora</h3>
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="#">Inicio</a></li>
                     <li><a href="#">Nosotros</a></li>
-                    <li><a href="{{route('contactanos')}}">Contactanos</a></li>
+                    <li><a href="#">Contactanos</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Visítanos</h3>
                 <p>Av. Wilson, Lima<br>34 Tesla, Ste 100<br>Lima, Ca5</p>
                 <h3>New Business</h3>
-                <p><a href="mailto:engage@weareenvoy.com">guitarheaven@gmail.com</a><br>974-859-548</p>
+                <p><a href="mailto:engage@weareenvoy.com">guitarhvncontac@gmail.com</a><br>937-279-264</p>
             </div>
             <div class="footer-section">
-                <h3>Siguenos</h3>
+                <h3>Follow</h3>
                 <ul>
-                    <li><a href="https://www.instagram.com/audiomusicape/?hl=es-la">Instagram</a></li>
-                    <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fdocguitarra">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/FabricaDeGuitarrasAndina/">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/">Instagram</a></li>
+                    <li><a href="https://twitter.com/home">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/">Facebook</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -43,7 +43,7 @@
                 </ul>
             </div>
             <div class="footer-section next-about">
-                <a href="#">Nosotros</a>
+                <a href="#">Sobre Nosotros</a>
             </div>
         </div>
         <div class="footer-bottom">

@@ -4,69 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .login-container {
+            display: flex;
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+        }
+        .login-image {
+            flex: 1;
+            background: url('/mnt/data/IMG-20240605-WA0045.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-image img {
+            width: 150px;
+            height: 150px;
+        }
+        .login-form {
+            flex: 1.5;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .login-form h1 {
+            margin-bottom: 20px;
+        }
+        .login-form .form-group {
+            margin-bottom: 15px;
+        }
+        .login-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .login-form .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .login-form .form-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .login-form .form-actions button {
+            padding: 10px 20px;
+        }
+        .login-form .form-actions a {
+            color: #666;
+            text-decoration: none;
+        }
+        .login-form .google-login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .login-form .google-login img {
+            margin-right: 10px;
+        }
+        header, footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a, footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+            }
+            .login-image {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     @include('layout.header')
-    <p>hola mundo</p>
-    <section class="h-100 gradient-form" style="background-color: #eee;">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-xl-10">
-              <div class="card rounded-3 text-black">
-                <div class="row g-0">
-                  <div class="col-lg-6">
-                    <div class="card-body p-md-5 mx-md-4">
-
-                      <div class="text-center">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                          style="width: 185px;" alt="logo">
-                        <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
-                      </div>
-
-                      <form>
-                        <p>Please login to your account</p>
-
-                        <div data-mdb-input-init class="form-outline mb-4">
-                          <input type="email" id="form2Example11" class="form-control"
-                            placeholder="Phone number or email address" />
-                          <label class="form-label" for="form2Example11">Username</label>
-                        </div>
-
-                        <div data-mdb-input-init class="form-outline mb-4">
-                          <input type="password" id="form2Example22" class="form-control" />
-                          <label class="form-label" for="form2Example22">Password</label>
-                        </div>
-
-                        <div class="text-center pt-1 mb-5 pb-1">
-                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                            in</button>
-                          <a class="text-muted" href="#!">Forgot password?</a>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="mb-0 me-2">Don't have an account?</p>
-                          <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-danger">Create new</button>
-                        </div>
-
-                      </form>
-
-                    </div>
-                  </div>
-                  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                      <h4 class="mb-4">We are more than just a company</h4>
-                      <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="content">
+        <div class="login-container">
+            <div class="login-image">
+                <img src="https://pin.it/5GzUrHN6l" alt="a">
             </div>
-          </div>
+            <div class="login-form">
+                <h1>Login</h1>
+                <div class="google-login">
+                    <img src="https://image.similarpng.com/very-thumbnail/2020/06/Logo-google-icon-PNG.png" alt="Google Icon" width="20">
+                    <button>Login with Google</button>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="username">USERNAME</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit">LOGIN</button>
+                        <a href="#">I forgot my password</a>
+                    </div>
+                </form>
+                <div class="register">
+                    <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
     @include('layout.footer')
 </body>
 </html>
