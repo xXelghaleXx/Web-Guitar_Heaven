@@ -1,0 +1,491 @@
+/*
+================================================================
+=====================| Estilos del Header |=====================
+================================================================
+*/
+.navbar {
+    background-color: #102C57; /* Color de fondo de la barra de navegación */
+
+}
+.navbar-brand {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+.nav-item {
+    font-size: 18px;
+}
+.nav-link {
+    color: #FFFFFF;
+    margin: 0 10px;
+}
+.nav-link:hover {
+    color: #00e7c4; /* Color al pasar el mouse */
+}
+.form-inline .form-control {
+    border-radius: 50px 0 0 50px;
+    width: 50px;
+
+}
+.search-btn {
+    border-radius: 0 50px 50px 0;
+}
+.icon {
+    font-size: 24px;
+    color: white;
+    margin-left: 40px; /* Espacio entre los iconos */
+}
+.navbar-top {
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-bottom {
+    justify-content: flex-end; /* Alineación de los íconos a la derecha */
+    background-color: #1f4071;
+    padding: 10px 0;
+}
+
+.navbar-bottom{
+padding: 20px;
+}
+
+
+/*
+================================================================
+=====================| Estilos del Footer |=====================
+================================================================
+*/
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    height: 357px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px 0;
+}
+
+.footer-section h2, .footer-section h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a, .footer-section p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover, .footer-section p a:hover {
+    text-decoration: underline;
+}
+
+.footer-section.next-about a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+
+
+/*
+==========================================================================
+=====================| Estilos del main y generales |=====================
+==========================================================================
+*/
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #DAC0A3;
+}
+
+/* Contenedor del contenido */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor de los botones de imagen */
+.image-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio mínimo entre las imágenes */
+}
+
+/* Estilo para cada botón de imagen */
+.image-button {
+    display: inline-block;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para las imágenes dentro de los botones */
+.image-button img {
+    display: block;
+    width: 400px; /* Ajusta el tamaño de la imagen según necesites */
+    height: 500px; /* Asegura que las imágenes tengan la misma altura */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+/* Estilo al pasar el mouse sobre el botón de imagen */
+.image-button:hover img {
+    filter: blur(0); /* Elimina el efecto de desenfoque al pasar el mouse */
+}
+
+/* Estilo para el título */
+h2 {
+    text-align: center;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 20px 0; /* Añade margen superior e inferior */
+    position: relative;
+    width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+}
+
+/* Pseudoelementos para las líneas horizontales */
+h2::before, h2::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #000;
+    margin: 0 10px; /* Espacio entre la línea y el texto */
+}
+
+.carousel {
+    max-width: 10000px;
+    margin: auto;
+}
+.carousel-item img {
+    width: 1500px;
+    height: 500px; /* Ajusta la altura según tus necesidades */
+    object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+}
+
+/*
+=============================================================================
+=====================| Descripcion de producto y venta |=====================
+=============================================================================
+*/
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header-container,
+.footer-container {
+    width: 100%;
+    color: white;
+}
+
+.header-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-container {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.imagen {
+    width: 450px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-container button a {
+    text-decoration: none;
+    color: white;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.descripcion table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.descripcion table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.info h1,
+.info h2,
+.info h3 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.info h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.descripcion h2 {
+    margin-top: 20px;
+}
+
+/*
+=============================================================================
+=====================| seccion |=====================
+=============================================================================
+*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 150px;
+    background-color: #fff;
+    width: 100%;
+    height: 300px;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 200px;
+    padding: 0 15px; /* Añade un espacio uniforme alrededor de cada servicio */
+
+}
+
+.service-item img {
+    margin-bottom: 0px; /* Incrementa el espacio entre la imagen y el texto */
+
+}
+
+.icon1 {
+    width: 140px;
+    height: 140px;
+    padding:-20px;
+}
+
+.icon2 {
+    width: 80px;
+    height: 80px;
+    padding:35px;
+}
+
+.icon3 {
+    width: 120px;
+    height: 120px;
+    padding:20px;
+}
+
+.icon4 {
+    width: 150px;
+    height: 150px;
+}
+
+.service-item h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin:0;
+}
+
+.service-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin:0;
+
+}
+/*
+======================================================================
+=====================| Login y sus estilos |==========================
+======================================================================
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #DAC0A3;
+}
+.login-container {
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+.login-image {
+    flex: 1;
+    background: url('/mnt/data/IMG-20240605-WA0045.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-image img {
+    width: 400px;
+    height: 500px;
+}
+.login-form {
+    flex: 1.5;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-form h1 {
+    margin-bottom: 20px;
+}
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+.login-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.login-form .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.login-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-form .form-actions button {
+    padding: 10px 20px;
+}
+.login-form .form-actions a {
+    color: #666;
+    text-decoration: none;
+    border-radius: 5px
+}
+
+.login-form .google-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.login-form .google-login img {
+    margin-right: 10px;
+}
+header, footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a, footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer {
+    text-align: center;
+}
+@media (max-width: 768px) {
+.login-container {
+    flex-direction: column;
+}
+.login-image {
+    display: none;
+}
+}

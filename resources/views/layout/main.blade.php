@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>@yield('tittle')</title>
     <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/hd_ft.css')}}">
+    <link rel="stylesheet" href="{{asset('css/the_only_one.css')}}">
+
 
 </head>
 <body class="footer-princip">
@@ -15,7 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark flex-column">
 
     <div class="navbar-top d-flex w-100">
-        <a class="navbar-brand" href="{{route('pag_principal')}}">Guitar Heaven</a>
+        <a class="navbar-brand" href="{{route('principal')}}">Guitar Heaven</a>
         <form class="form-inline d-flex ml-auto"> <!-- Utilidad ml-auto para alinear a la derecha -->
             <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
             <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>
@@ -32,10 +33,10 @@
     <div class="navbar-bottom d-flex w-100">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{route('descripcion')}}">Marcas</a>
+                <a class="nav-link" href="{{route('marcas')}}">Marcas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('cards')}}">Modelos</a>
+                <a class="nav-link" href="#">Modelos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Amplificadores</a>
@@ -53,6 +54,10 @@
     </div>
 </nav>
 
+
+@yield('content')
+
+@include('layout.footer')
 <!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
