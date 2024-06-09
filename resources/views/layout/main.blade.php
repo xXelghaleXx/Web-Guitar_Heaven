@@ -20,7 +20,6 @@
         <form class="form-inline d-flex ml-auto"> <!-- Utilidad ml-auto para alinear a la derecha -->
             <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
             <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>
-            <!-- Agregar iconos junto al buscador -->
             <a href="#" class="icon"><i class="fas fa-bell"></i></a>
             <a href="#" class="icon"><i class="fas fa-envelope"></i></a>
         </form>
@@ -29,6 +28,27 @@
             <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
             <a href="{{route('login')}}" class="icon"><i class="fas fa-user"></i></a>
         </div>
+    </div>
+    <div class="de-todo">
+        <label>
+            <input class="input_unico" type="checkbox">
+            <div class="toggle_unico">
+                <span class="topo_unico comun_unico"></span>
+                <span class="medio_unico comun_unico"></span>
+                <span class="bajo_unico comun_unico"></span>
+            </div>
+            <div class="slide_unico">
+                <h1 class="titulo_unico">Menu</h1>
+                <ul class="ul_unico">
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-tv"></i>dashboard</a></li>
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-user"></i>dashboard</a></li>
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li>
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li>
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-folder"></i>dashboard</a></li>
+                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-address-book"></i>dashboard</a></li>
+                </ul>
+            </div>
+        </label>
     </div>
     <div class="navbar-bottom d-flex w-100">
         <ul class="navbar-nav mx-auto">
