@@ -74,7 +74,6 @@
     </div>
 </nav>
 
-
 @yield('content')
 
 @include('layout.footer')
