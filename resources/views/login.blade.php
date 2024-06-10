@@ -4,7 +4,7 @@
     <div class="content">
         <div class="login-container">
             <div class="login-image">
-                <img src="{{asset('imagenes/fondo.jpg')}}" alt="guitarras de fondo">
+                <img src="{{asset('imagenes/Logo-login.jpg')}}" alt="guitarras de fondo">
             </div>
             <div class="login-form">
                 <h1>Login</h1>

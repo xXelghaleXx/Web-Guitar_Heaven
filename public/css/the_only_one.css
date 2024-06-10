@@ -432,7 +432,6 @@ footer {
 .input_unico {
     display: none;
     visibility: hidden;
-    -webkit-appearance: none;
 }
 .toggle_unico {
     position: absolute;

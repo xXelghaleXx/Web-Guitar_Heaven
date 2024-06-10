@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark flex-column">
 
     <div class="navbar-top d-flex w-100">
-        <a class="navbar-brand" href="{{route('principal')}}">Guitar Heaven</a>
+        <a class="navbar-brand" href="{{route('principal')}}"><img src="{{asset('imagenes/Logo_oficial.jpg')}}" alt="El logo oficial de nuestra empresa" width="50px" height="50px"></a>
         <form class="form-inline d-flex ml-auto"> <!-- Utilidad ml-auto para alinear a la derecha -->
             <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
             <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>

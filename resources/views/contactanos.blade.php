@@ -50,7 +50,7 @@
     </style>
 </head>
 <body>
-    @include('layout.header')
+    @include('layout.main')
     <div class="contact-container">
         <div class="row">
             <div class="col-md-6 contact-logo">
