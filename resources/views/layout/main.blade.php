@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('tittle')</title>
     <!-- Font Awesome -->
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/the_only_one.css')}}">
 
 
@@ -65,7 +67,7 @@
                 <a class="nav-link" href="#">Accesorios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Guías</a>
+                <a class="nav-link" href="{{route('guias')}}">Guías</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('contactanos')}}">Contáctanos</a>

@@ -200,8 +200,8 @@ video {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 80%; /* Ajustar este valor para cambiar el ancho máximo del video */
+    max-height: 80%; /* Ajustar este valor para cambiar la altura máxima del video */
     width: auto;
     height: auto;
     object-fit: cover;
@@ -230,6 +230,7 @@ video {
     position: relative;
     z-index: 2;
 }
+
 
 /*
 ======================================================================
@@ -355,79 +356,114 @@ video {
 =====================| Estilos del Login |============================
 ======================================================================
 */
+body.login {
+    font-family: Arial, sans-serif;
+}
+
 .login-container {
-    display: flex;
-    background-color: white;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
     border-radius: 10px;
-    overflow: hidden;
-    max-width: 800px;
-    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.login-image {
-    flex: 1;
-    background: url('/mnt/data/IMG-20240605-WA0045.jpg') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login-image img {
-    width: 400px;
-    height: 500px;
-}
-.login-form {
-    flex: 1.5;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.login-form h1 {
+
+.login-header {
     margin-bottom: 20px;
 }
-.login-form .form-group {
-    margin-bottom: 15px;
+
+.login-header h2 {
+    font-size: 2rem;
+    color: #6c757d;
 }
-.login-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-.login-form .form-group input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.login-form .form-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.login-form .form-actions button {
-    padding: 10px 20px;
-}
-.login-form .form-actions a {
-    color: #666;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.login-form .google-login {
+
+.google-login {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
-.login-form .google-login img {
+
+.google-login img {
     margin-right: 10px;
 }
-@media (max-width: 768px) {
-    .login-container {
-        flex-direction: column;
-    }
-    .login-image {
-        display: none;
-    }
+
+.login-form .form-group label {
+    font-weight: bold;
 }
+
+.login-form .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+======================================================================
+=====================| Estilos del Register |=========================
+======================================================================
+*/
+
+body.register {
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-header {
+    margin-bottom: 20px;
+}
+
+.register-header h2 {
+    font-size: 2rem;
+    color: #6c757d;
+}
+
+.register-form .form-group label {
+    font-weight: bold;
+}
+
+.register-form .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.register-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 
 /*
 ======================================================================
@@ -802,4 +838,113 @@ footer {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid #444;
+}
+
+/*
+======================================================================
+=====================| Estilos del Contactanos |=========================
+======================================================================
+*/
+
+.body.contactanos {
+    font-family: Arial, sans-serif;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-header {
+    margin-bottom: 20px;
+}
+.contact-header h2 {
+    font-size: 2rem;
+    color: #6c757d;
+}
+.contact-header p {
+    color: #6c757d;
+}
+.contact-form .form-group label {
+    font-weight: bold;
+}
+.contact-form .btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+.contact-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+======================================================================
+=====================| Estilos del Guias |=========================
+======================================================================
+*/
+
+body.guías {
+    font-family: Arial, sans-serif;
+}
+
+.guides-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.guides-container h2 {
+    font-size: 2.5rem;
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.guide-sections .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guide-item {
+    margin-bottom: 20px;
+}
+
+.guide-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.guide-item img:hover {
+    transform: scale(1.05);
+}
+
+.guide-caption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.guide-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.guide-link:hover .guide-caption {
+    text-decoration: underline;
 }

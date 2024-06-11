@@ -1,36 +1,45 @@
 @extends('layout.main')
-@section('tittle', 'login')
+@section('title', 'login')
 @section('content')
-    <div class="content">
-        <div class="login-container">
-            <div class="login-image">
-                <img src="{{asset('imagenes/Logo-login.jpg')}}" alt="guitarras de fondo">
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<body.login>
+
+    <div class="login-container">
+        <div class="row">
+            <div class="col-md-6 login-logo">
+                <img src="{{asset('imagenes/Logo-login.jpg')}}" alt="Guitar Heaven Logo">
             </div>
-            <div class="login-form">
-                <h1>Login</h1>
+            <div class="col-md-6 login-form">
+                <div class="login-header">
+                    <h2>Login</h2>
+                </div>
                 <div class="google-login">
                     <img src="https://image.similarpng.com/very-thumbnail/2020/06/Logo-google-icon-PNG.png" alt="Google Icon" width="20">
-                    <button>Inicia sesion con Google</button>
+                    <button>Inicia sesión con Google</button>
                 </div>
                 <form>
                     <div class="form-group">
                         <label for="username">Usuario</label>
-                        <input type="text" id="username" placeholder="ingresa tu usuario/correo">
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario/correo">
                     </div>
                     <div class="form-group">
-                        <label for="password">Contrasena</label>
-                        <input type="password" id="password" placeholder="ingresa tu contrasena">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
                     </div>
                     <div class="form-actions">
-                        <button type="submit">Login</button>
-                        <a href="#">Olvide mi contrasena</a>
+                        <button type="submit" class="btn btn-block">Login</button>
+                        <a href="#">Olvidé mi contraseña</a>
                     </div>
                 </form>
                 <div class="register">
-                    <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+                    <p>¿No tienes cuenta? <a href="{{route('register')}}">Regístrate</a></p>
                 </div>
             </div>
         </div>
     </div>
+
+</body.login>
+</html>
 
 @endsection
