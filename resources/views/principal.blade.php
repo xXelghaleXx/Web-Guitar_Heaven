@@ -56,18 +56,22 @@
 
 
 <div class="body">
-    <div class="content">
-        <h2>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Marcas Populares ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</h2>
-        <div class="image-buttons">
-            <div class="image-button">
-                <img src="{{ asset('imagenes/fender_logo.jpg') }}" alt="Fender">
-            </div>
-            <div class="image-button">
-                <img src="{{ asset('imagenes/gibson_logo.jpg') }}" alt="Gibson">
-            </div>
-            <div class="image-button">
-                <img src="{{ asset('imagenes/ibanez_logo.jpg') }}" alt="Ibanez">
-            </div>
+    <h1>──────────────────── EVERYTHING YOU NEED ─────────────────── </h1>
+    <div class="container">
+        <div class="image-button" id="ibanez">
+            <img src="https://i.pinimg.com/564x/1a/0b/86/1a0b862640d27f037fa393c83e42ea0f.jpg" alt="Ibanez Guitar">
+            <div class="overlay"></div>
+            <div class="label">IBANEZ</div>
+        </div>
+        <div class="image-button" id="gibson">
+            <img src="https://i.pinimg.com/564x/20/16/09/201609111ea213fcb45603b2739f6420.jpg" alt="Gibson Guitar">
+            <div class="overlay"></div>
+            <div class="label">GIBSON</div>
+        </div>
+        <div class="image-button" id="fender">
+            <img src="https://i.pinimg.com/564x/03/fa/e8/03fae892652d70ed441282bfd318410b.jpg" alt="Fender Guitar">
+            <div class="overlay"></div>
+            <div class="label">FENDER</div>
         </div>
     </div>
 </div>
