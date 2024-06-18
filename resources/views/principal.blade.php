@@ -75,4 +75,34 @@
         </div>
     </div>
 </div>
+
+<h1>Lista de Productos</h1>
+
+<!-- Slider de precio-->
+<div class="contenedor-aplicacion">
+    <div class="contenedor-filtros">
+        <div class="caja-filtro">
+            <label for="rangoPrecio" class="etiqueta-filtro">FILTRAR POR PRECIO</label>
+            <input type="range" id="rangoPrecio" class="filtro-rango" min="0.00" max="10000.00" step="10" value="150" oninput="actualizarPrecio(this.value)">
+            <button id="botonFiltrar" class="boton-filtro">FILTRAR</button>
+            <p class="precio-filtro">Precio: S/<span id="valorPrecio">00.00</span></p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        @foreach ($productos as $productos)
+            <div class="col-md-4">
+                {{-- Comienzo del card de producto --}}
+                <div class="product-card">
+                    <img src="{{ asset('imagenes/test02.jpg') }}">
+                    <div class="product-name">{{ $productos->detalles }}</div>
+                    <div class="product-price">S/.{{ $productos->precio }}</div>
+                    <a href="{{ route('producto.show', ['id' => $productos->id_producto ]) }}" class="btn btn-primary">Ver producto</a>
+                </div>
+                {{-- Fin del card de producto --}}
+            </div>
+        @endforeach
+    </div>
+
 @endsection

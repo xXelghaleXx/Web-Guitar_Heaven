@@ -18,14 +18,17 @@
                     <img src="https://image.similarpng.com/very-thumbnail/2020/06/Logo-google-icon-PNG.png" alt="Google Icon" width="20">
                     <button>Inicia sesión con Google</button>
                 </div>
-                <form>
+                <form method="POST">
+
+                    @csrf
+
                     <div class="form-group">
-                        <label for="username">Usuario</label>
-                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario/correo">
+                        <label for="username">Correo</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario/correo" name="email">
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña" name="password">
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-block">Login</button>

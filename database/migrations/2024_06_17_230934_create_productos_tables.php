@@ -15,11 +15,17 @@ return new class extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id('id_producto');
-            $table->string('detalles', 60);
+            $table->string('detalles');
+            $table->string('marca');
             $table->decimal('precio', 20, 2);
-            $table->string('dimensiones')->nullable();
-            $table->string('marca')->nullable();
-            $table->string('tipo')->nullable();
+            $table->string('madera')->nullable();
+            $table->string('cuello')->nullable();
+            $table->string('diapason')->nullable();
+            $table->string('radio_diapason')->nullable();
+            $table->string('longitud_escala')->nullable();
+            $table->string('trastes')->nullable();
+            $table->string('pastilla')->nullable();
+            $table->string('extra')->nullable();
             $table->integer('stock')->nullable();
             $table->timestamps();
         });

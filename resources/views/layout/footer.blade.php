@@ -22,9 +22,9 @@
             <div class="footer-section">
                 <h3>Follow</h3>
                 <ul>
-                    <li><a href="https://www.facebook.com/">Instagram</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
                     <li><a href="https://twitter.com/home">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/">Facebook</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
                 </ul>
             </div>
             <div class="footer-section">

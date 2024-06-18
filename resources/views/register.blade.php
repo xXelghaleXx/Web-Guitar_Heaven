@@ -15,22 +15,25 @@
                 <div class="register-header">
                     <h2>Regístrate</h2>
                 </div>
-                <form>
+                <form method="POST">
+
+                    @csrf
+
                     <div class="form-group">
-                        <label for="username">Usuario</label>
-                        <input type="text" class="form-control" id="username" placeholder="Ingresa tu usuario">
+                        <label for="username">Nombre</label>
+                        <input type="text" class="form-control" id="username" placeholder="Ingrese su nombre" name="nombre">
                     </div>
                     <div class="form-group">
                         <label for="email">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" name="email">
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>
-                        <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+                        <input type="password" class="form-control" id="password" placeholder="Ingresa su contraseña" name="password">
                     </div>
                     <div class="form-group">
                         <label for="confirm-password">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirma tu contraseña">
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirme su contraseña">
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-block">Regístrate</button>
