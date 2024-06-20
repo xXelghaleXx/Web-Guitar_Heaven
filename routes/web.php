@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\CarritoController;
 
 // index //
 
@@ -17,12 +18,9 @@ Route::post('/login', [LoginController::class, 'login']);
 
 // Producto //
 
-Route::get('/producto/{id}', [ProductoController::class, 'show'])->name('producto');
-Route::get('/producto/{id}', [ProductoController::class, 'add'])->name('producto.add');
-
-
-
-
+Route::get('producto/{id}', [ProductoController::class, 'show'])->name('productos.show');
+Route::get('carrito/{id}', [CarritoController::class, 'add'])->name('producto.add');
+Route::get('carrito', [CarritoController::class, 'index'])->name('carritos.index');
 
 // Sin implementar //
 
@@ -30,6 +28,6 @@ Route::get('/producto/{id}', [ProductoController::class, 'add'])->name('producto
 Route::view('/main', 'layout.main')->name('main');
 Route::view('/contactanos',  'contactanos')->name('contactanos');
 Route::view('/guias',  'guias')->name('guias');
-
+Route::view('/modelos_gen','modelos_gen')->name('generos');
 
 Route::view('/prueba', 'prueba')->name('prueba');

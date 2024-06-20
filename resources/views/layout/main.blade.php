@@ -25,7 +25,7 @@
         </form>
 
         <div class="d-flex align-items-center">
-            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="{{route('carritos.index')}}" class="icon"><i class="fas fa-shopping-cart"></i></a>
             <a href="{{route('login')}}" class="icon"><i class="fas fa-user"></i></a>
         </div>
     </div>
@@ -56,7 +56,7 @@
                 <a class="nav-link" href="#">Marcas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Modelos</a>
+                <a class="nav-link" href="{{route('generos')}}">Modelos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Amplificadores</a>

@@ -63,11 +63,16 @@ h2::before, h2::after {
 .search-btn {
     border-radius: 0 50px 50px 0;
 }
+.search-btn:hover{
+    background-color: #f75c0f;
+    color: white;
+}
 .icon {
     font-size: 24px;
     color: white;
-    margin-left: 40px;
+    margin-left: 40px
 }
+
 .navbar-top {
     justify-content: space-between;
     align-items: center;
@@ -545,14 +550,16 @@ body.register {
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
 }
+
 .slide_unico {
     height: 100%;
     width: 180px;
     position: absolute;
-    background-color: #011a41;
+    background-color: #102C57;
     transition: 0.5s ease;
     transform: translateX(-180px);
 }
+
 .titulo_unico {
     color: #ffffff;
     font-weight: 800;
@@ -561,9 +568,11 @@ body.register {
     padding-right: 30px;
     pointer-events: none;
 }
+
 .ul_unico .li_unico {
     list-style: none;
 }
+
 .ul_unico .li_unico .a_unico {
     color: #ffffff;
     font-weight: 500;
@@ -573,18 +582,22 @@ body.register {
     text-decoration: none;
     transition: 0.2s ease-out;
 }
+
 .ul_unico .li_unico:hover .a_unico {
     color: #fff;
     background-color: #f75c0f;
 }
+
 .ul_unico .li_unico .a_unico .icono_unico {
     width: 40px;
     text-align: center;
 }
+
 .input_unico {
     display: none;
     visibility: hidden;
 }
+
 .toggle_unico {
     position: absolute;
     height: 30px;
@@ -594,12 +607,14 @@ body.register {
     z-index: 1;
     cursor: pointer;
     border-radius: 2px;
-    background-color: #011a41;
+    background-color: #102C57;
     box-shadow: 0 0 10px rgba(3, 42, 236, 0.256);
 }
+
 .toggle_unico:hover {
     background-color: #f75c0f;
 }
+
 .toggle_unico .comun_unico {
     position: absolute;
     height: 2px;
@@ -608,41 +623,48 @@ body.register {
     border-radius: 50px;
     transition: 0.3s ease;
 }
+
 .toggle_unico .topo_unico {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .toggle_unico .medio_unico {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .toggle_unico .bajo_unico {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .input_unico:checked ~ .toggle_unico .topo_unico {
-    left: 2px;
-    top: 14px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
     width: 25px;
-    transform: rotate(45deg);
 }
+
 .input_unico:checked ~ .toggle_unico .bajo_unico {
-    left: 2px;
-    top: 14px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
     width: 25px;
-    transform: rotate(-45deg);
 }
+
 .input_unico:checked ~ .toggle_unico .medio_unico {
     opacity: 0;
-    transform: translateX(20px);
 }
+
 .input_unico:checked ~ .slide_unico {
     transform: translateX(0);
     box-shadow: 0 0 15px rgba(24, 72, 216, 0.5);
 }
+
 
 /*
 ================================================================
@@ -1022,17 +1044,14 @@ body.guías {
 ======================================================================
 */
 .contenedor-aplicacion {
-    font-family: Arial, sans-serif;
     display: flex;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
 }
 
 .contenedor-filtros {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    width: 300px;
+    margin-right: 20px; /* Espacio entre el filtro y las tarjetas de producto */
 }
 
 .caja-filtro {
@@ -1040,9 +1059,8 @@ body.guías {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
     text-align: center;
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 .etiqueta-filtro {
@@ -1077,8 +1095,331 @@ body.guías {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
-    width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-left: 20px;
+}
+
+/*
+======================================================================
+=====================| Estilos del Slideprice |=======================
+======================================================================
+*/
+.contenedor-aplicacion {
+    display: flex;
+    align-items: flex-start;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-filtros {
+    width: 300px;
+    margin-right: 20px; /* Espacio entre el filtro y las tarjetas de producto */
+}
+
+.caja-filtro {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.etiqueta-filtro {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.filtro-rango {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.boton-filtro {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-filtro:hover {
+    background-color: #333;
+}
+
+.precio-filtro {
+    margin-top: 10px;
+}
+
+.caja-filtro {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/*
+======================================================================
+=======================|  card de producto  |=========================
+======================================================================
+*/
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4 {
+    flex: 1 0 30%; /* Ajusta la flexibilidad y el tamaño de las columnas */
+    margin-bottom: 10px; /* Espacio inferior entre las tarjetas */
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-producto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px; /* Ajusta el margen para reducir el espacio entre tarjetas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    width: 250px !important; /* Ajusta el ancho de la tarjeta */
+    height: 350px !important; /* Ajusta la altura de la tarjeta */
+}
+
+.tarjeta-producto:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta-producto img {
+    max-width: 50% !important;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px; /* Ajusta el margen inferior */
+}
+
+.nombre-producto {
+    font-size: 1em; /* Ajusta el tamaño de fuente */
+    font-weight: bold;
+    margin-bottom: 5px; /* Ajusta el margen inferior */
+    color: #333;
+}
+
+.precio-producto {
+    font-size: 0.9em; /* Ajusta el tamaño de fuente */
+    color: #888;
+    margin-bottom: 10px; /* Ajusta el margen inferior */
+}
+
+.btn-primario {
+    background-color: #003366;
+    border: none;
+    color: white;
+    padding: 5px 10px; /* Ajusta el relleno del botón */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 0.9em; /* Ajusta el tamaño de fuente */
+}
+
+.btn-primario:hover {
+    background-color: #f75c0f;
+    text-decoration: none;
+    color: white;
+}
+/*
+======================================================================
+=====================| Carro de compras |======================
+======================================================================
+*/
+carrito-contenidoo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+.carrito-contenidoo {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.carritto-tituloo {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #102C57;
+    border-bottom: 2px solid #102C57;
+    padding-bottom: 10px;
+}
+.carrito-tablaa {
+    width: 100%;
+    border-collapse: collapse;
+}
+.carrito-tablaa th, .carrito-tablaa td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.carrito-tablaa th {
+    font-size: 1.2em;
+    color: #102C57;
+}
+.carrito-tablaa td img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+.cart-item-details {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1em;
+    color: #555;
+}
+.cantidad-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.cantidad-contenedor button {
+    background-color: #102C57;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.cantidad-contenedor button:hover {
+    background-color: #000;
+}
+.cantidad-contenedor input {
+    text-align: center;
+    width: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+.delete-icon {
+    cursor: pointer;
+    color: #d9534f;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+.delete-icon:hover {
+    color: #c9302c;
+}
+/*
+======================================================================
+======================| Productos por genero |========================
+======================================================================
+*/
+.encabezado-principal {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 100%;
+}
+
+.encabezado {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.encabezado .enlace-todos-productos{
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.genero {
+    position: relative;
+    margin: 20px 0; /* Margen vertical entre los elementos */
+    overflow: hidden;
+    width: 1300px; /* Ancho fijo para todas las imágenes */
+    height: 600px; /* Alto fijo para todas las imágenes */
+}
+
+.genero img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para mantener la proporción de la imagen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.genero span.nombre-genero {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black; /* Color de texto por defecto */
+    font-size: 36px; /* Aumentar el tamaño de la fuente para mejor visibilidad */
+    font-weight: bold;
+    z-index: 2;
+    transition: color 0.3s ease-in-out; /* Transición para el cambio de color */
+}
+
+.genero a.boton-ver-mas {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.genero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.genero-rock:hover::before {
+    background: linear-gradient(to top, rgb(255, 102, 0), transparent);
+}
+
+.genero-metal:hover::before {
+    background: linear-gradient(to top, rgb(255, 0, 0), transparent);
+}
+
+.genero-blues:hover::before {
+    background: linear-gradient(to top, rgb(0, 153, 255), transparent);
+}
+
+.genero-reggae:hover::before {
+    background: linear-gradient(to top, rgb(0, 255, 0), transparent);
+}
+
+.genero:hover img {
+    transform: scale(1.1);
+}
+
+.genero:hover span.nombre-genero {
+    color: white; /* Cambia el color del texto a blanco al hacer hover */
 }

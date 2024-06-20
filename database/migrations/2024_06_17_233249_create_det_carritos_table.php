@@ -18,16 +18,17 @@ return new class extends Migration
             $table->unsignedBigInteger('id_producto');
             $table->integer('cantidad');
             $table->decimal('total', 10, 2)->nullable();
-            
-            $table->primary(['id_carrito', 'id_producto']); 
-            
+
+            $table->primary(['id_carrito', 'id_producto']);
+
             $table->foreign('id_carrito')
                   ->references('id_carrito')
                   ->on('carritos');
-                  
+
             $table->foreign('id_producto')
                   ->references('id_producto')
                   ->on('productos');
+            $table->timestamps();
         });
     }
 

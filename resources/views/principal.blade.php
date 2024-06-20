@@ -10,7 +10,7 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{asset('imagenes/banner1.jpg')}}" class="d-block w-100" alt="Imagen 1">
+            <img src="{{asset('imagenes/banner1.png')}}" class="d-block w-100" alt="Imagen 1">
         </div>
         <div class="carousel-item">
             <img src="{{asset('imagenes/banner2.jpg')}}" class="d-block w-100" alt="Imagen 2">
@@ -56,53 +56,40 @@
 
 
 <div class="body">
-    <h1>──────────────────── EVERYTHING YOU NEED ─────────────────── </h1>
+    <h1>───────────── MARCAS POPULARES ─────────────</h1>
     <div class="container">
         <div class="image-button" id="ibanez">
             <img src="https://i.pinimg.com/564x/1a/0b/86/1a0b862640d27f037fa393c83e42ea0f.jpg" alt="Ibanez Guitar">
             <div class="overlay"></div>
-            <div class="label">IBANEZ</div>
+            <div class="label"><a href="#">FENDER</a></div>
         </div>
         <div class="image-button" id="gibson">
             <img src="https://i.pinimg.com/564x/20/16/09/201609111ea213fcb45603b2739f6420.jpg" alt="Gibson Guitar">
             <div class="overlay"></div>
-            <div class="label">GIBSON</div>
+            <div class="label"><a href="#">GIBSON</a></div>
         </div>
         <div class="image-button" id="fender">
             <img src="https://i.pinimg.com/564x/03/fa/e8/03fae892652d70ed441282bfd318410b.jpg" alt="Fender Guitar">
             <div class="overlay"></div>
-            <div class="label">FENDER</div>
+            <div class="label"><a href="#">IBANEZ</a></div>
         </div>
     </div>
 </div>
 
-<h1>Lista de Productos</h1>
-
-<!-- Slider de precio-->
-<div class="contenedor-aplicacion">
-    <div class="contenedor-filtros">
-        <div class="caja-filtro">
-            <label for="rangoPrecio" class="etiqueta-filtro">FILTRAR POR PRECIO</label>
-            <input type="range" id="rangoPrecio" class="filtro-rango" min="0.00" max="10000.00" step="10" value="150" oninput="actualizarPrecio(this.value)">
-            <button id="botonFiltrar" class="boton-filtro">FILTRAR</button>
-            <p class="precio-filtro">Precio: S/<span id="valorPrecio">00.00</span></p>
-        </div>
-    </div>
-</div>
+<h1>───────────── Lista de Productos ─────────────</h1>
 
 <div class="row">
-        @foreach ($productos as $productos)
-            <div class="col-md-4">
-                {{-- Comienzo del card de producto --}}
-                <div class="product-card">
-                    <img src="{{ asset('imagenes/test02.jpg') }}">
-                    <div class="product-name">{{ $productos->detalles }}</div>
-                    <div class="product-price">S/.{{ $productos->precio }}</div>
-                    <a href="{{ route('producto.show', ['id' => $productos->id_producto ]) }}" class="btn btn-primary">Ver producto</a>
-                </div>
-                {{-- Fin del card de producto --}}
+    @foreach ($productos as $productos)
+        <div class="col-md-4">
+            {{-- Comienzo del card de producto --}}
+            <div class="tarjeta-producto">
+                <img src="{{ asset('imagenes/jaguar.jpg') }}">
+                <div class="nombre-producto">{{ $productos->detalles }}</div>
+                <div class="precio-producto">S/.{{ $productos->precio }}</div>
+                <a href="{{ route('productos.show', ['id' => $productos->id_producto ]) }}" class="btn-primario">Ver producto</a>
             </div>
-        @endforeach
-    </div>
-
+            {{-- Fin del card de producto --}}
+        </div>
+    @endforeach
+</div>
 @endsection
