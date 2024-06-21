@@ -76,8 +76,6 @@
     </div>
 </div>
 
-<h1>───────────── Lista de Productos ─────────────</h1>
-
 <div class="row">
     @foreach ($productos as $productos)
         <div class="col-md-4">

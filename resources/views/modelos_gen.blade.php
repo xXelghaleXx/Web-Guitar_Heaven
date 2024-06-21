@@ -10,7 +10,7 @@
     <div class="genero genero-rock">
         <img src="{{asset('imagenes/rock_guitar.jpg')}}" class="genero-prev-rock">
         <span class="nombre-genero">ROCK</span>
-        <a href="#" class="boton-ver-mas">VER MÁS</a>
+        <a href="{{route('rock')}}" class="boton-ver-mas">VER MÁS</a>
     </div>
     <div class="genero genero-metal">
         <img src="{{asset('imagenes/metal_guitar.webp')}}" class="genero-prev-metal">

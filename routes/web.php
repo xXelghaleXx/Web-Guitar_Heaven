@@ -29,5 +29,5 @@ Route::view('/main', 'layout.main')->name('main');
 Route::view('/contactanos',  'contactanos')->name('contactanos');
 Route::view('/guias',  'guias')->name('guias');
 Route::view('/modelos_gen','modelos_gen')->name('generos');
-
+Route::view('/modelos_rock', 'modelos_rock')->name('rock');
 Route::view('/prueba', 'prueba')->name('prueba');

@@ -9,6 +9,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/the_only_one.css')}}">
 
 
@@ -75,6 +76,11 @@
 </nav>
 
 @yield('content')
+
+<video autoplay muted loop class="video-background">
+    <source src="{{asset('videos/guitar-background.mp4')}}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
 @include('layout.footer')
 <!-- Bootstrap JS, Popper.js, and jQuery -->
