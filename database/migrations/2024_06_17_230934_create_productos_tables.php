@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('trastes')->nullable();
             $table->string('pastilla')->nullable();
             $table->string('extra')->nullable();
+            $table->string('genero')->nullable();
             $table->integer('stock')->nullable();
             $table->timestamps();
         });

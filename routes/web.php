@@ -20,14 +20,23 @@ Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('producto/{id}', [ProductoController::class, 'show'])->name('productos.show');
 Route::get('carrito/{id}', [CarritoController::class, 'add'])->name('producto.add');
-Route::get('carrito', [CarritoController::class, 'index'])->name('carritos.index');
+Route::get('carrito', [CarritoController::class, 'index'])->name('carrito.index');
 
 // Sin implementar //
 
+// Carrito //
+
+Route::middleware(['auth'])->group(function () {
+    Route::put('/carrito/{id_carrito}/{id_producto}', [CarritoController::class, 'update'])->name('carrito.update');
+    Route::delete('/carrito/{id_carrito}/{id_producto}', [CarritoController::class, 'destroy'])->name('carrito.destroy');
+});
+
 // Route::view('/marcas', 'marcas')->name('marcas');
 Route::view('/main', 'layout.main')->name('main');
+Route::view('/rep_music', 'layout.rep_music')->name('musica');
 Route::view('/contactanos',  'contactanos')->name('contactanos');
 Route::view('/guias',  'guias')->name('guias');
 Route::view('/modelos_gen','modelos_gen')->name('generos');
 Route::view('/modelos_rock', 'modelos_rock')->name('rock');
 Route::view('/prueba', 'prueba')->name('prueba');
+Route::view('/hola', 'sinUsar')->name('sinUsar');

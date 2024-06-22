@@ -15,16 +15,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ventas', function (Blueprint $table) {
-            $table->id('id_venta'); 
+            $table->id('id_venta');
             $table->unsignedBigInteger('id_usuario');
             $table->date('fecha_venta')->default(DB::raw('CURRENT_DATE')); // fecha_venta DATE DEFAULT (CURRENT_DATE)
             $table->string('metodo_pago', 40);
-            
+
             $table->foreign('id_usuario')
                 ->references('id')
                 ->on('users');
-            
-            $table->timestamps(); 
+
+            $table->timestamps();
         });
     }
 

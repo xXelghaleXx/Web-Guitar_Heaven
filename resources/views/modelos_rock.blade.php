@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.rep_music')
 @section('tittle', 'modelos_rock')
 @section('content')
 

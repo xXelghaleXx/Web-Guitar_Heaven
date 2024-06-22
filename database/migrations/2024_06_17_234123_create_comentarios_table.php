@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_producto');
             $table->string('comentario', 200);
             $table->date('fecha_comentario')->default(DB::raw('CURRENT_DATE')); // fecha_comentario DATE DEFAULT (CURRENT_DATE)
-            
+
             $table->foreign('id_usuario')
                 ->references('id')
                 ->on('users');
