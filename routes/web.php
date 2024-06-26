@@ -36,6 +36,11 @@ Route::view('/main', 'layout.main')->name('main');
 Route::view('/rep_music', 'layout.rep_music')->name('musica');
 Route::view('/contactanos',  'contactanos')->name('contactanos');
 Route::view('/guias',  'guias')->name('guias');
+
+Route::view('/amplificadores',  'amplificadores')->name('amplificadores');
+Route::view('/marca-fender', 'marca-fender')->name('marca-fender');
+Route::view('/marca-gibson', 'marca-gibson')->name('marca-gibson');
+Route::view('/marca-ibanez', 'marca-ibanez')->name('marca-ibanez');
 Route::view('/modelos_gen','modelos_gen')->name('generos');
 Route::view('/modelos_rock', 'modelos_rock')->name('rock');
 Route::view('/prueba', 'prueba')->name('prueba');

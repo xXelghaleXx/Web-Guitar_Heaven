@@ -1429,6 +1429,7 @@ carrito-contenidoo {
     width: 100%;
     height: 650px; /* Ajusta la altura fija de la imagen */
     overflow: hidden;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.785), rgba(240, 76, 6, 0.76), rgba(255, 177, 10, 0.769), rgba(243, 125, 21, 0.769), rgba(255, 177, 10, 0.769), rgba(255, 177, 10, 0.769), rgba(240, 76, 6, 0.76), rgba(255, 0, 0, 0.705),      transparent);
 }
 
 .imagen-fondo-guitarra1 {
@@ -1477,6 +1478,7 @@ carrito-contenidoo {
     text-align: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 /*
 ======================================================================
 =======================| Reproductor de Musica |======================
@@ -1654,3 +1656,151 @@ carrito-contenidoo {
     }
 }
 
+/*
+======================================================================
+===========================| Marca-Fender |===========================
+======================================================================
+*/
+.bd-001 {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.fndr-123-banner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.fndr-456-banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fndr-789-product-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333; /* Line below the text */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:monospace;
+}
+
+.fndr-101-logos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.fndr-112-logo {
+    width: 500px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.fndr-112-logo:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}
+
+.bd-002 {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.bnnr-001 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.bnnr-img-001 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prd-hdr-001 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333; /* Line below the text */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+.lgos-001 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.lg-001 {
+    width: 500px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.lg-001:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}
+
+.bd-003 {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.bnnr-002 {
+    width: 100%;
+    overflow: hidden;
+}
+
+.bnnr-img-002 {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prd-hdr-002 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333; /* Line below the text */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+.lgos-002 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.lg-002 {
+    width: 500px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.lg-002:hover {
+    transform: scale(1.1); /* Scale up the logo on hover */
+}

@@ -15,10 +15,19 @@
         <div class="info">
             <h1>{{ $producto->detalles }}</h1>
             <h2>{{ $producto->marca }}</h2>
+            <h3>Stock: {{ $producto->stock }} UNIDADES</h1>
             <h3>Precio: S/.{{ $producto->precio }}</h3>
         </div>
         <div class="descripcion">
             <h2>DESCRIPCIÓN</h2>
+            <p>Madera: {{ $producto->madera }}</p>
+            <p>Cuello: {{ $producto->cuello }}</p>
+            <p>Diapasón: {{ $producto->diapason }}</p>
+            <p>Radio del diapasón: {{ $producto->radio_diapason }}</p>
+            <p>Longitud de la escala: {{ $producto->longitud_escala }}</p>
+            <p>Trastes: {{ $producto->trastes }}</p>
+            <p>Pastilla: {{ $producto->pastilla }}</p>
+            <p>Extra: {{ $producto->extra }}</p>
         </div>
     </div>
 </div>

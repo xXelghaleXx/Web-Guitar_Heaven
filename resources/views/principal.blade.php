@@ -61,12 +61,12 @@
         <div class="image-button" id="ibanez">
             <img src="https://i.pinimg.com/564x/1a/0b/86/1a0b862640d27f037fa393c83e42ea0f.jpg" alt="Ibanez Guitar">
             <div class="overlay"></div>
-            <div class="label"><a href="#">FENDER</a></div>
+            <div class="label"><a href="{{route('marca-fender')}}">FENDER</a></div>
         </div>
         <div class="image-button" id="gibson">
             <img src="https://i.pinimg.com/564x/20/16/09/201609111ea213fcb45603b2739f6420.jpg" alt="Gibson Guitar">
             <div class="overlay"></div>
-            <div class="label"><a href="#">GIBSON</a></div>
+            <div class="label"><a href="{{route('marca-gibson')}}">GIBSON</a></div>
         </div>
         <div class="image-button" id="fender">
             <img src="https://i.pinimg.com/564x/03/fa/e8/03fae892652d70ed441282bfd318410b.jpg" alt="Fender Guitar">
@@ -77,17 +77,22 @@
 </div>
 
 <div class="row">
-    @foreach ($productos as $productos)
+    @foreach ($productos as $producto)
         <div class="col-md-4">
             {{-- Comienzo del card de producto --}}
             <div class="tarjeta-producto">
                 <img src="{{ asset('imagenes/jaguar.jpg') }}">
-                <div class="nombre-producto">{{ $productos->detalles }}</div>
-                <div class="precio-producto">S/.{{ $productos->precio }}</div>
-                <a href="{{ route('productos.show', ['id' => $productos->id_producto ]) }}" class="btn-primario">Ver producto</a>
+                <div class="nombre-producto">{{ $producto->detalles }}</div>
+                <div class="precio-producto">S/.{{ $producto->precio }}</div>
+                <a href="{{ route('productos.show', ['id' => $producto->id_producto ]) }}" class="btn-primario">Ver producto</a>
             </div>
             {{-- Fin del card de producto --}}
         </div>
     @endforeach
 </div>
+
+{{-- Paginación --}}
+        <div class="mt-4">
+            {{ $productos->links() }}
+        </div>
 @endsection

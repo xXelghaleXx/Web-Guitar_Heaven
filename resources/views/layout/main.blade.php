@@ -10,6 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/the_only_one.css')}}">
 
 
@@ -60,7 +61,7 @@
                 <a class="nav-link" href="{{route('generos')}}">Modelos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Amplificadores</a>
+                <a class="nav-link" href="{{route('amplificadores')}}">Amplificadores</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Accesorios</a>
