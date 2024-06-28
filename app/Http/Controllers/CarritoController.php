@@ -30,7 +30,7 @@ class CarritoController extends Controller
         }
 
         $detCarritos = $carrito->det_carritos;
-        return view('carrito', compact('detCarritos'));
+        return view('carrito.index', compact('detCarritos'));
     }
 
 

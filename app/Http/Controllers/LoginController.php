@@ -20,13 +20,13 @@ class LoginController extends Controller
             return redirect('/');
 
         }
-        return redirect('login');
+        return redirect()->route('login');
     }
 
     public function logout()
     {
         Auth::logout();
-        return redirect('main');
+        return redirect()->route('principal');
     }
 
     public function register(Request $request){
@@ -36,6 +36,6 @@ class LoginController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        return redirect('/');
+        return redirect()->route('login');
     }
 }

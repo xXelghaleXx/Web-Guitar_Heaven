@@ -12,8 +12,6 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/the_only_one.css')}}">
-
-
 </head>
 <body class="footer-princip">
 
@@ -27,38 +25,54 @@
         </form>
 
         <div class="d-flex align-items-center">
-            <a href="{{route('carrito.index')}}" class="icon"><i class="fas fa-shopping-cart"></i></a>
-            <a href="{{route('login')}}" class="icon"><i class="fas fa-user"></i></a>
+
+            @guest
+
+            <a href="{{ route('login') }}" class="icon"><i class="fas fa-user"></i></a>
+
+            @else
+
+            <a href="{{ route('carrito.index') }}" class="icon"><i class="fas fa-shopping-cart"></i></a>
+            <a href="{{ route('logout') }}" class="icon">Logout</i></a>
+
+            @endguest
+
         </div>
     </div>
-    <div class="de-todo">
-        <label>
-            <input class="input_unico" type="checkbox">
-            <div class="toggle_unico">
-                <span class="topo_unico comun_unico"></span>
-                <span class="medio_unico comun_unico"></span>
-                <span class="bajo_unico comun_unico"></span>
-            </div>
-            <div class="slide_unico">
-                <h1 class="titulo_unico">Menu</h1>
-                <ul class="ul_unico">
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-tv"></i>dashboard</a></li>
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-user"></i>dashboard</a></li>
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li>
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li>
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-folder"></i>dashboard</a></li>
-                    <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-address-book"></i>dashboard</a></li>
-                </ul>
-            </div>
-        </label>
-    </div>
+
+    @if (auth()->check() && auth()->user()->rol == 'admin')
+
+        <div class="de-todo">
+            <label>
+                <input class="input_unico" type="checkbox">
+                <div class="toggle_unico">
+                    <span class="topo_unico comun_unico"></span>
+                    <span class="medio_unico comun_unico"></span>
+                    <span class="bajo_unico comun_unico"></span>
+                </div>
+                <div class="slide_unico">
+                    <h1 class="titulo_unico">Admin Menu</h1>
+                    <ul class="ul_unico">
+                        <li class="li_unico"><a class="a_unico" href="{{ route('productos.list') }}"><i class="icono_unico fas fa-tv"></i>Productos</a></li> {{-- Faltante --}}
+                        <li class="li_unico"><a class="a_unico" href="{{ route('usuarios.list') }}"><i class="icono_unico fas fa-user"></i>Usuarios</a></li> {{-- Faltante --}}
+                        <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li> {{-- Faltante --}}
+                        <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-comments"></i>dashboard</a></li> {{-- Faltante --}}
+                        <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-folder"></i>dashboard</a></li> {{-- Faltante --}}
+                        <li class="li_unico"><a class="a_unico" href="#"><i class="icono_unico fas fa-address-book"></i>dashboard</a></li> {{-- Faltante --}}
+                    </ul>
+                </div>
+            </label>
+        </div>
+
+    @endif
+
     <div class="navbar-bottom d-flex w-100">
         <ul class="navbar-nav mx-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Marcas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('generos')}}">Modelos</a>
+                <a class="nav-link" href="{{route('modelos.index')}}">Modelos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('amplificadores')}}">Amplificadores</a>
@@ -78,10 +92,7 @@
 
 @yield('content')
 
-<video autoplay muted loop class="video-background">
-    <source src="{{asset('videos/guitar-background.mp4')}}" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+
 
 @include('layout.footer')
 <!-- Bootstrap JS, Popper.js, and jQuery -->
