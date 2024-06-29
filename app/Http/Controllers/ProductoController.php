@@ -60,9 +60,8 @@ class ProductoController extends Controller
         if ($request->hasFile('imagen')) {
 
             $imagen = $request->file('imagen');
-            $nombre_imagen = 'producto' . $id . "." . $imagen->getClientOriginalExtension();;
-            $ruta_imagen = public_path('/imagenes');
-            $imagen->move($ruta_imagen, $nombre_imagen);
+            $nombreImagen = 'gbsg.jpg' ; // Or $imagen->getClientOriginalExtension()
+            $imagen->move(public_path('imagenes'), $nombreImagen);
         }
 
         $producto->save();
@@ -72,8 +71,46 @@ class ProductoController extends Controller
     }
 
 
-    public function create(Request $request)
+    public function create()
     {
+        return view('admin.productos.create');
+    }
 
+    public function store(Request $request)
+    {
+        $request->validate([
+            'detalles' => 'required',
+            'marca' => 'required',
+            'stock' => 'required|integer',
+            'precio' => 'required|numeric',
+            // 'imagen' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ejemplo de validación de imagen
+        ]);
+
+        if ($request->hasFile('imagen')) {
+            $imagen = $request->file('imagen');
+            $nombre_imagen = time() . '_' . $imagen->getClientOriginalName();
+            $ruta_imagen = $imagen->storeAs('public/imagenes', $nombre_imagen);
+        } else {
+            $ruta_imagen = null; // Opcional: manejar una imagen por defecto o no tener imagen
+        }
+
+        $producto = new Producto();
+        $producto->detalles = $request->detalles;
+        $producto->marca = $request->marca;
+        $producto->stock = $request->stock;
+        $producto->precio = $request->precio;
+
+        $producto->madera = $request->madera;
+        $producto->cuello = $request->cuello;
+        $producto->diapason = $request->diapason;
+        $producto->radio_diapason = $request->radio_diapason;
+        $producto->longitud_escala = $request->longitud_escala;
+        $producto->trastes = $request->trastes;
+        $producto->pastilla = $request->pastilla;
+        $producto->extra = $request->extra;
+
+        $producto->save();
+
+        return redirect()->route('productos.list')->with('success', 'Producto creado correctamente');
     }
 }

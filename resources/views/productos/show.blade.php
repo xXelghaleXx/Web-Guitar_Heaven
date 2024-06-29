@@ -5,7 +5,7 @@
 <div class="container">
     <div class="izquierda">
         <img class="imagen" src="{{ asset('imagenes/gbsg.jpg') }}" alt="Guitarra Godin-MULTIAC ACS SLIM">
-        @if (auth()->user()->rol == 'admin')
+        @if (auth()->check() && auth()->user()->rol == 'admin')
         <form action="{{ route('productos.edit', ['id' => $producto->id_producto]) }}">
             <div class="button-container">
                 <button >Editar Producto</button>

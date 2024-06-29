@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.video-brack')
 @section('tittle', 'modelos_gen')
 @section('content')
 

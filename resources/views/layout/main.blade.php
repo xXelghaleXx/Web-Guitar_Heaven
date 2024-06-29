@@ -19,12 +19,15 @@
 
     <div class="navbar-top d-flex w-100">
         <a class="navbar-brand" href="{{route('principal')}}"><img src="{{asset('imagenes/Logo_oficial.jpg')}}" alt="El logo oficial de nuestra empresa" class="logo_1"></a>
-        <form class="form-inline d-flex ml-auto"> <!-- Utilidad ml-auto para alinear a la derecha -->
-            <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-light search-btn" type="submit"><i class="fas fa-search"></i></button>
-        </form>
+
+        <div class="barra_busqueda" >
+        <input type="search" placeholder="Buscar..." aria-label="Buscar">
+        <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
 
         <div class="d-flex align-items-center">
+
+            <a href="{{ route('carrito.index') }}" class="icon"><i class="fas fa-shopping-cart"></i></a>
 
             @guest
 
@@ -32,8 +35,7 @@
 
             @else
 
-            <a href="{{ route('carrito.index') }}" class="icon"><i class="fas fa-shopping-cart"></i></a>
-            <a href="{{ route('logout') }}" class="icon">Logout</i></a>
+            <a href="{{ route('logout') }}" class="icon"><i class="fas fa-sign-out-alt"></i></a>
 
             @endguest
 
@@ -64,7 +66,7 @@
             </label>
         </div>
 
-    @endif
+    @else
 
     <div class="navbar-bottom d-flex w-100">
         <ul class="navbar-nav mx-auto">
@@ -88,6 +90,9 @@
             </li>
         </ul>
     </div>
+
+    @endif
+
 </nav>
 
 @yield('content')
@@ -100,7 +105,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="{{asset('js/slide.js')}}"></script>
+<script src="{{asset('js/slideprice.js')}}"></script>
 <!-- Font Awesome -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>

@@ -74,7 +74,7 @@ Route::view('/contactanos',  'extra.contactanos')->name('contactanos');
 
 Route::view('/guias',  'extra.guias')->name('guias');
 
-
+Route::view('/pago', 'carrito.pago')->name('carrito.pago');
 
 
 

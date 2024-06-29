@@ -46,7 +46,7 @@
             </tbody>
         </table>
         <div style="text-align: center; margin-top: 20px;">
-            <button class="pago">Pagar</button>
+            <button class="pago"><a href="{{ route('carrito.pago' )}}">Pagar</a></button>
         </div>
     </div>
 @endsection

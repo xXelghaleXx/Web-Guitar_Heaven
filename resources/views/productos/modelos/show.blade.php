@@ -12,6 +12,5 @@
 </div>
 @endsection
 
-@section('musica', 'Reproductor de Música')
 
-@include('layout.rep_music')
+
