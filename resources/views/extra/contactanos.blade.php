@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.video-brack')
 @section('tittle', 'contactanos')
 @section('content')
 
@@ -9,7 +10,7 @@
     <div class="contact-container">
         <div class="row">
             <div class="col-md-6 contact-logo">
-                <img src="https://previews.123rf.com/images/floartz/floartz2310/floartz231000619/215290505-fondo-abstracto-de-varios-fondos-de-pantalla-de-m%C3%BAsica-de-guitarras.jpg" alt="Fondo guitarra">
+                <img src="{{asset('imagenes/Logo-login.jpg')}}" alt="Fondo guitarra">
             </div>
             <div class="col-md-6 contact-form">
                 <div class="contact-header">
@@ -37,13 +38,6 @@
                     <div class="form-group">
                         <label for="comments">Comentarios</label>
                         <textarea class="form-control" id="comments" rows="5" placeholder="Escribe tus comentarios aquí"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="privacy-policy">
-                        <label class="form-check-label" for="privacy-policy">He leído y acepto la <a href="#">política de privacidad</a></label>
                     </div>
                     <button type="submit" class="btn btn-block">Enviar</button>
                 </form>

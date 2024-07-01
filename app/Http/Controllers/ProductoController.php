@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comentario;
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProductoController extends Controller
@@ -11,15 +13,65 @@ class ProductoController extends Controller
 
     // USER
 
-    public function index()
+    public function indexMain()
     {
         $productos = Producto::paginate(9);
+        return view('productos.index', compact('productos'));
+    }
+
+    public function index()
+    {
+        $productos = Producto::where('tipo', 'guitarra')->paginate(9);
         return view('principal', compact('productos'));
     }
 
-    public function show($id){
-        $producto = Producto::find($id);
-        return view('productos.show', compact('producto'));
+    public function index2()
+    {
+        $productos = Producto::where('tipo', 'amplificador')->paginate(9);
+        return view('productos.amplificadores.show', compact('productos'));
+    }
+
+    public function index3()
+    {
+        $productos = Producto::where('tipo', 'accesorio')->paginate(9);
+        return view('productos.accesorios.show', compact('productos'));
+    }
+
+    public function filtro(Request $request)
+    {
+        $minimo = $request->valor;
+        $productos = Producto::whereBetween('precio', [$minimo, 7980])->paginate(9);
+        return view('productos.index', compact('productos'));
+    }
+
+    public function filtroExtra(Request $request)
+    {
+        $tipo = $request->tipo_producto;
+        $minimo = $request->valor;
+
+        if (rtrim($tipo, 's') == "producto") {
+            $nuevaCadena = rtrim($tipo, 's');
+        } elseif (substr($tipo, -2) == "es") {
+            $nuevaCadena = substr($tipo, 0, -2);
+        } else {
+            $nuevaCadena = $tipo;
+        }
+
+        $productos = Producto::whereBetween('precio', [$minimo, 7980])
+                ->where('tipo', $nuevaCadena)
+                ->paginate(9);
+        return view('productos.' . $tipo . '.show');
+    }
+
+    public function show($id)
+    {
+        $producto = Producto::findOrFail($id);
+        $comentarios = DB::table('comentarios')
+                    ->join('users', 'users.id', '=', 'comentarios.id_usuario')
+                    ->where('comentarios.id_producto', '=', $id)
+                    ->select('users.nombre', 'comentarios.comentario', 'comentarios.fecha_comentario')
+                    ->get();
+        return view('productos.show', compact('producto', 'comentarios'));
     }
 
     // ADMIN
@@ -60,7 +112,7 @@ class ProductoController extends Controller
         if ($request->hasFile('imagen')) {
 
             $imagen = $request->file('imagen');
-            $nombreImagen = 'gbsg.jpg' ; // Or $imagen->getClientOriginalExtension()
+            $nombreImagen = 'producto' . $producto->id_producto . '.' . $imagen->getClientOriginalExtension();
             $imagen->move(public_path('imagenes'), $nombreImagen);
         }
 
@@ -86,12 +138,16 @@ class ProductoController extends Controller
             // 'imagen' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Ejemplo de validación de imagen
         ]);
 
+        $ultimoProducto = Producto::latest()->first();
+        $ultimoId = $ultimoProducto ? $ultimoProducto->id : 0;
+
         if ($request->hasFile('imagen')) {
             $imagen = $request->file('imagen');
-            $nombre_imagen = time() . '_' . $imagen->getClientOriginalName();
-            $ruta_imagen = $imagen->storeAs('public/imagenes', $nombre_imagen);
+            $nuevoId = $ultimoId + 1;
+            $nombreImagen = 'producto' . $nuevoId . '.' . $imagen->getClientOriginalExtension();
+            $imagen->move(public_path('imagenes'), $nombreImagen);
         } else {
-            $ruta_imagen = null; // Opcional: manejar una imagen por defecto o no tener imagen
+            return "Error";
         }
 
         $producto = new Producto();
@@ -112,5 +168,11 @@ class ProductoController extends Controller
         $producto->save();
 
         return redirect()->route('productos.list')->with('success', 'Producto creado correctamente');
+    }
+
+    public function destroy($id)
+    {
+        Producto::destroy($id);
+        return redirect()->route('productos.list');
     }
 }

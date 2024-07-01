@@ -13,7 +13,7 @@ class ModeloController extends Controller
     }
     public function show($genero)
     {
-        $productos = Producto::where('genero', $genero)->get();
-        return view('productos.marcas.show', compact('productos'));
+        $productos = Producto::where('genero', $genero)->paginate(9);
+        return view('productos.modelos.show', compact('productos'));
     }
 }

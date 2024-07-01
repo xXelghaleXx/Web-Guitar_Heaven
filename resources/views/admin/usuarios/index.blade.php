@@ -1,53 +1,55 @@
 @extends('layout.main')
 @section('content')
-<center>
-    <h1>Lista de Usuarios</h1>
+
+<div class="user-list-container">
+    <center>
+    <h1 class="user-list-title">Lista de Usuarios</h1>
     <br>
     @if ($usuarios->isEmpty())
-        <p>No hay usuarios registrados.</p>
+        <p class="no-users-message">No hay usuarios registrados.</p>
     @else
-        <table>
-            <thead>
+        <table class="user-table">
+            <thead class="user-table-head">
                 <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Email</th>
-                    <th>Dirección</th>
-                    <th>Teléfono</th>
-                    <th>Rol</th>
+                    <th class="table-header-id">ID</th>
+                    <th class="table-header-nombre">Nombre</th>
+                    <th class="table-header-apellido">Apellido</th>
+                    <th class="table-header-email">Email</th>
+                    <th class="table-header-direccion">Dirección</th>
+                    <th class="table-header-telefono">Teléfono</th>
+                    <th class="table-header-rol">Rol</th>
                     {{--
-                    <th>Acciones</th>
+                    <th class="table-header-acciones">Acciones</th>
                     --}}
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="user-table-body">
                 @foreach ($usuarios as $usuario)
-                    <tr>
-                        <td>{{ $usuario->id }}</td>
-                        <td>{{ $usuario->nombre }}</td>
-                        <td>{{ $usuario->apellido }}</td>
-                        <td>{{ $usuario->email }}</td>
-                        <td>{{ $usuario->direccion ?? '-' }}</td>
-                        <td>{{ $usuario->telefono ?? '-' }}</td>
-                        <td>{{ $usuario->rol }}</td>
+                    <tr class="user-table-row">
+                        <td class="table-cell-id">{{ $usuario->id }}</td>
+                        <td class="table-cell-nombre">{{ $usuario->nombre }}</td>
+                        <td class="table-cell-apellido">{{ $usuario->apellido }}</td>
+                        <td class="table-cell-email">{{ $usuario->email }}</td>
+                        <td class="table-cell-direccion">{{ $usuario->direccion ?? '-' }}</td>
+                        <td class="table-cell-telefono">{{ $usuario->telefono ?? '-' }}</td>
+                        <td class="table-cell-rol">{{ $usuario->rol }}</td>
 
                         {{--
-                        <td>
-                            <a href="{{ route('usuarios.edit', $usuario->id) }}">Editar</a>
+                        <td class="table-cell-acciones">
+                            <a href="{{ route('usuarios.edit', $usuario->id) }}" class="btn-editar">Editar</a>
                             <form action="{{ route('usuarios.destroy', $usuario->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit">Eliminar</button>
+                                <button type="submit" class="btn-eliminar">Eliminar</button>
                             </form>
                         </td>
                         --}}
-
                     </tr>
                 @endforeach
             </tbody>
         </table>
     @endif
-</center>
+    </center>
+</div>
 
 @endsection

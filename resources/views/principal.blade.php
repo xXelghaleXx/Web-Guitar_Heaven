@@ -11,13 +11,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="{{asset('imagenes/banner1.png')}}" class="d-block w-100" alt="Imagen 1">
+            <img src="{{asset('imagenes/banner001.png')}}" class="d-block w-100" alt="Imagen 1">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('imagenes/banner2.jpg')}}" class="d-block w-100" alt="Imagen 2">
+            <img src="{{asset('imagenes/banner002.png')}}" class="d-block w-100" alt="Imagen 2">
         </div>
         <div class="carousel-item">
-            <img src="{{asset('imagenes/banner3.jpg')}}" class="d-block w-100" alt="Imagen 3">
+            <img src="{{asset('imagenes/banner003.png')}}" class="d-block w-100" alt="Imagen 3">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -77,37 +77,39 @@
     </div>
 </div>
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-12 col-md-4">
-            <div class="filter-container">
-                <label for="priceRange">FILTRAR POR PRECIO</label>
-                <input type="range" id="priceRange" min="150" max="7980" step="10" value="150" oninput="updatePrice(this.value)">
-                <button id="filterButton">FILTRAR</button>
-                <p>Precio: S/<span id="priceValue">150</span> — S/7,980</p>
+  <div class="container mt-4">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="filter-container">
+                    <label for="priceRange">FILTRAR POR PRECIO</label>
+                    <form action="{{ route('productos.filtro') }}" method="POST">
+                        @csrf
+                        <input type="range" id="priceRange" name="valor" min="150" max="7980" step="10" value="150" oninput="updatePrice(this.value)">
+                        <button id="filterButton" type="submit">FILTRAR</button>
+                    </form>
+                    <p>Precio: S/<span id="priceValue">150</span> — S/7,980</p>
+                </div>
             </div>
-        </div>
-        <div class="col-12 col-md-8">
-            <div class="row">
-                @foreach ($productos as $producto)
-                    <div class="col-6 col-md-4 mb-3 d-flex align-items-stretch">
-                        {{-- Comienzo del card de producto --}}
-                        <div class="tarjeta-producto">
-                            <img src="{{ asset('imagenes/ibnz-negra.png') }}">
-                            <div class="nombre-producto">{{ $producto->detalles }}</div>
-                            <div class="precio-producto">S/.{{ $producto->precio }}</div>
-                            <a href="{{ route('productos.show', ['id' => $producto->id_producto ]) }}" class="btn-primario">Ver producto</a>
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    @foreach ($productos as $producto)
+                        <div class="col-6 col-md-4 mb-3 d-flex align-items-stretch">
+                            {{-- Comienzo del card de producto --}}
+                            <div class="tarjeta-producto">
+                                <img src="{{ asset('imagenes/producto' . $producto->id_producto . '.jpg') }}">
+                                <div class="nombre-producto">{{ $producto->detalles }}</div>
+                                <div class="precio-producto">S/.{{ $producto->precio }}</div>
+                                <a href="{{ route('productos.show', ['id' => $producto->id_producto ]) }}" class="btn-primario11">Ver producto</a>
+                            </div>
+                            {{-- Fin del card de producto --}}
                         </div>
-                        {{-- Fin del card de producto --}}
-                    </div>
-                @endforeach
-            </div>
-            <div class="d-flex justify-content-end mt-4">
-                {!! $productos->links() !!}
+                    @endforeach
+                </div>
+                <div class="d-flex justify-content-center">
+                    {{ $productos->links() }}
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 
 @endsection

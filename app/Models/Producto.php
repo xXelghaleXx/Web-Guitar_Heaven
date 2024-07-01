@@ -21,4 +21,9 @@ class Producto extends Model
     // {
     //    return $this->hasMany(DetCarrito::class, 'id_producto', 'id_producto');
     // }
+
+    public function comentarios()
+    {
+        return $this->hasMany(Comentario::class, 'id_producto', 'id_producto');
+    }
 }

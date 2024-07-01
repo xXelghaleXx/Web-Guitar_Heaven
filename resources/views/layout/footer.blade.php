@@ -1,5 +1,4 @@
-
-    <footer>
+<footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Guitar Heaven</h3>
@@ -8,38 +7,40 @@
             <div class="footer-section">
                 <h3>Explora</h3>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="{{route('principal')}}">Inicio</a></li>
                     <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Contactanos</a></li>
+                    <li><a href="{{route('contactanos')}}">Contactanos</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Visítanos</h3>
-                <p>Av. Wilson, Lima<br>34 Tesla, Ste 100<br>Lima, Ca5</p>
+                <p class="texto-privacidad">Av. 2 de mayo, Lima<br>34 Tesla, Ste 100<br>Lima, Ca5</p>
                 <h3>New Business</h3>
-                <p><a href="mailto:engage@weareenvoy.com">guitarhvncontac@gmail.com</a><br>937-279-264</p>
+                <p><a href="mailto:guitarhvncontac@gmail.com">guitarhvncontac@gmail.com</a><br>937-279-264</p>
             </div>
             <div class="footer-section">
-                <h3>Follow</h3>
+                <h3>Síguenos</h3>
                 <ul>
-                    <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    <li><a href="https://twitter.com/home">Twitter</a></li>
-                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/guitar_heaven_web/">Instagram</a></li>
+                    <li><a href="https://x.com/GuitarHeaven_">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61561602816583&is_tour_dismissed">Facebook</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h3>Legal</h3>
                 <ul>
-                    <li><a href="#">Términos</a></li>
-                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="{{ route('terminos.index') }}">Términos</a></li>
+                    <li><a href="{{ route('privacidad') }}">Privacidad</a></li>
                 </ul>
             </div>
             <div class="footer-section next-about">
-                <a href="#">Sobre Nosotros</a>
+                <h3>Sobre nosotros</h3>
+                <ul>
+                    <li><a href="{{ route('sobre') }}">Sobre nosotros</a></li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 Guitar Heaven. Todos los derechos reservados.</p>
+            <p class="texto-privacidad">© 2024 Guitar Heaven. Todos los derechos reservados.</p>
         </div>
-    </footer>
-
+</footer>

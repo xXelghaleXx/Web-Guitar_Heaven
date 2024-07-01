@@ -4,9 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\MarcaController;
 use App\Http\Controllers\ModeloController;
+use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\VentaController;
+use App\Http\Controllers\DashboardController;
 
 // index //
 
@@ -22,13 +26,27 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Usuario //
 
+    Route::get('/usuario/perfil', [UsuarioController::class, 'profile'])->name('usuarios.profile');
+    Route::get('/usuario/perfil/editar', [UsuarioController::class, 'edit'])->name('usuarios.edit');
+    Route::get('/usuario/perfil/update', [UsuarioController::class, 'update'])->name('usuarios.update');
+    Route::get('/usuario/pedidos', [PedidoController::class, 'show'])->name('usuarios.pedidos');
+    Route::get('/usuario/pedidos/{id}', [PedidoController::class, 'detPedido'])->name('usuarios.det_pedidos');
+
     // ADMIN
 
     Route::get('/admin/usuarios', [UsuarioController::class, 'index'])->name('usuarios.list');
+    Route::get('/admin/ventas', [VentaController::class, 'list'])->name('ventas.list');
+    Route::get('/admin/pedidos', [PedidoController::class, 'list'])->name('pedidos.list');
+    Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 // Producto //
 
-Route::get('/producto/{id}', [ProductoController::class, 'show'])->name('productos.show');
+    Route::get('/producto/all', [ProductoController::class, 'indexMain'])->name('productos.all');
+    Route::get('/producto/{id}', [ProductoController::class, 'show'])->name('productos.show');
+    Route::post('/producto/comentario', [ComentarioController::class, 'add'])->name('comentario.add');
+    Route::post('/producto/comentario/destroy/{id}', [ComentarioController::class, 'destroy'])->name('comentario.destoy');
+    Route::post('/producto/filtro', [ProductoController::class, 'filtro'])->name('productos.filtro');
+    Route::post('/producto/filtro/extra', [ProductoController::class, 'filtroExtra'])->name('productos.filtroExtra');
 
     // ADMIN CRUD
 
@@ -37,7 +55,7 @@ Route::get('/producto/{id}', [ProductoController::class, 'show'])->name('product
     Route::post('/admin/productos/store', [ProductoController::class, 'store'])->name('productos.store');
     Route::get('/admin/productos/{id}/edit', [ProductoController::class, 'edit'])->name('productos.edit');
     Route::put('/admin/productos/{id}', [ProductoController::class, 'update'])->name('productos.update');
-    Route::get('/admin/productos/{id}', [ProductoController::class, 'destroy'])->name('productos.destroy');
+    Route::delete('/admin/productos/{id}', [ProductoController::class, 'destroy'])->name('productos.destroy');
 
 // Carrito
 
@@ -47,6 +65,11 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/carrito/{id_carrito}/{id_producto}', [CarritoController::class, 'update'])->name('carrito.update');
     Route::delete('/carrito/{id_carrito}/{id_producto}', [CarritoController::class, 'destroy'])->name('carrito.destroy');
 });
+
+// Pago
+
+Route::get('/pago', [CarritoController::class, 'pay'])->name('carrito.pago');
+Route::post('/pago', [VentaController::class, 'add'])->name('carrito.pago');
 
 // Marca
 
@@ -59,9 +82,12 @@ Route::get('/modelos/{modelo}', [ModeloController::class, 'show'])->name('modelo
 
 // Extras
 
-    // amplificadores
+// amplificadores
 
-    Route::view('/amplificadores',  'productos.amplificadores.index')->name('amplificadores');
+Route::view('/amplificadores','productos.amplificadores.index')->name('amplificadores');
+Route::get('/amplificadores/all', [ProductoController::class, 'index2'])->name('amplificadores.all');
+Route::view('/accesorios','productos.accesorios.index')->name('accesorios');
+Route::get('/accesorios/all', [ProductoController::class, 'index3'])->name('accesorios.all');
 
 
 Route::view('/main', 'layout.main')->name('main'); //layout!!
@@ -74,7 +100,12 @@ Route::view('/contactanos',  'extra.contactanos')->name('contactanos');
 
 Route::view('/guias',  'extra.guias')->name('guias');
 
-Route::view('/pago', 'carrito.pago')->name('carrito.pago');
+
+//Térmnos y codiciones
+
+Route::view('/terminos','terminos.index')->name('terminos.index');
+Route::view('/privacidad','privacidad.index')->name('privacidad');
+Route::view('/sobrenosotros','sobre.index')->name('sobre');
 
 
 

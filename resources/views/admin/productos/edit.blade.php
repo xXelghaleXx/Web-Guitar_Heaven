@@ -10,7 +10,7 @@
         @method('PUT')
 
         <div class="izquierda">
-            <img class="imagen" src="{{ asset('imagenes/gbsg.jpg') }}" alt="Guitarra Godin-MULTIAC ACS SLIM">
+            <img class="imagen" src="{{ asset('imagenes/producto' . $producto->id_producto . '.jpg') }}" alt="Guitarra Godin-MULTIAC ACS SLIM">
             <input type="file" name="imagen" accept="image/*"> {{-- Campo para subir nueva imagen --}}
         </div>
 

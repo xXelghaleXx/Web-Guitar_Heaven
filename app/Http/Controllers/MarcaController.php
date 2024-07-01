@@ -9,7 +9,7 @@ class MarcaController extends Controller
 {
     public function show($marca)
     {
-        $productos = Producto::where('marca', $marca)->get();
+        $productos = Producto::where('marca', $marca)->paginate(9);
         return view('productos.marcas.show', compact('productos'));
     }
 }

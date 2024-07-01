@@ -7,6 +7,7 @@ use App\Models\DetCarrito;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CarritoController extends Controller
 {
@@ -130,4 +131,14 @@ class CarritoController extends Controller
         return redirect()->route('carrito.index')->with('success', 'Producto eliminado del carrito');
     }
 
+
+    public function pay()
+    {
+        if(auth()->user()->apellido == Null){
+            return redirect()->route('usuarios.edit');
+        }
+        $userId = auth()->id();
+        $detalle = DB::select('CALL sp_mostrar_pago_carrito(?)', array($userId));
+        return view('carrito.pago', compact('detalle'));
+    }
 }

@@ -1,4 +1,5 @@
 @extends('layout.main')
+@extends('layout.video-brack')
 @section('title', 'login')
 @section('content')
 
@@ -25,7 +26,6 @@
                     </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-block">Login</button>
-                        <a href="#">Olvidé mi contraseña</a>
                     </div>
                 </form>
                 <div class="register">

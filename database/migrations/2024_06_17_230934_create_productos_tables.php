@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('extra')->nullable();
             $table->string('genero')->nullable();
             $table->integer('stock')->nullable();
+            $table->string('tipo')->nullable();
             $table->timestamps();
         });
     }
